@@ -48,7 +48,7 @@ def get_include_paths():
 
         for storage in storages.values():
             try:
-                include_paths.append(storage.path('.'))
+                include_paths.append(storage.path('.') + "/sass/")
             except NotImplementedError:
                 # storages that do not implement 'path' do not store files locally,
                 # and thus cannot provide an include path
